@@ -5,4 +5,5 @@ description = "Add your description here"
 readme = "README.md"
 dependencies = [
     "pandas>=2.3.3",
+    "scipy>=1.16.3",
 ]
