@@ -7,6 +7,9 @@ def perform_convolution(matrix, kernel):
     result = np.zeros((number_rows, number_columns))
     for i in range(number_rows):
         for j in range(number_columns):
+            #  No need to calculate
+            if padded[i+1, j+1] == 0:
+                continue
             region = padded[i:i + 3, j:j + 3]
             result[i, j] = np.sum(region * kernel)
 
